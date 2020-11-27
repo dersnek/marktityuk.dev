@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400&display=swap');
+@import url('all.min.css');
+
+:root {
+  --main-color: #00ff85;
+  --bg-color: #111919;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Overpass';
+  color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  margin-top: -40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+header, main {
+  flex-shrink: 0;
+}
+
+.main-text {
+  padding: 0 40px;
+}
+
+.main-text .static {
+  display: inline-block; 
+  line-height: 64px;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+.v-slider-frame {
+  display: inline-block;
+  height: 64px;
+  width: 460px;
+  overflow: hidden;
+  vertical-align: middle;
+  text-align: left;
+  position: relative;
+}
+
+.v-slider-frame:after {
+  content:'';
+  width:100%;
+  height:100%;    
+  position:absolute;
+  left:0;
+  top:0;
+  background: -moz-linear-gradient(top,  var(--bg-color) 0%, transparent 30%, transparent 70%, var(--bg-color) 100%);
+  background: -webkit-linear-gradient(top, var(--bg-color) 0%, transparent 30%,transparent 70%, var(--bg-color) 100%);
+  background: linear-gradient(to bottom, var(--bg-color) 0%, transparent 30%,transparent 70%, var(--bg-color) 100%);
+}
+
+ul.v-slides {
+  list-style-type: none;
+  transform: translateY(64px);
+  padding:0;
+  margin:0;
+}
+
+.v-slide {
+  line-height: 64px;
+}
+
+.v-slide .ruby {
+  color: #cc0000;
+}
+
+.v-slide .go {
+  color: #00c2ff;
+}
+
+.v-slide .fullstack {
+  color: #744bcb;
+}
+
+.v-slide .game {
+  color: #e7b816;
+}
+
+.icon {
+  margin: 0 15px;
+  display: inline-block;
+}
+
+.icon object {
+  width: 40px;
+  height: 40px;
+}
+
+a.icon-link {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+object {
+  pointer-events: none;
+}
