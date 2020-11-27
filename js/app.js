@@ -5,7 +5,7 @@ function initAnim() {
 		slides: document.getElementsByClassName('v-slide'),
 		list: document.getElementsByClassName('v-slides')[0],
 		duration: 7,
-		lineHeight: 64
+		lineHeight: 4
 	};
 
 	var vSlide = gsap.timeline({
@@ -19,7 +19,7 @@ function initAnim() {
 			duration = 0;
 		}
 		vSlide.to(vsOpts.list, duration, {
-			y: i * -1 * vsOpts.lineHeight,
+			y: i * -1 * vsOpts.lineHeight + "rem",
 			ease: Elastic.easeOut.config(0.4, 0.4)
 		});
 	}
