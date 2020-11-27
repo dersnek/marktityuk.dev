@@ -17,23 +17,53 @@ body {
   background-color: rgba(17, 25, 25, 255);
   font-family: 'Overpass';
   color: var(--main-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: fixed;
 }
 
 .page-wrapper {
   min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+          justify-content: center;
+
+  -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   font-size: 2.5rem;
   overflow-x: auto;
   padding: 2rem 1rem;
 }
 
 main {
-  flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  font-size: 2.5rem;
+  margin: auto;
 }
 
 footer {
@@ -43,7 +73,12 @@ footer {
 }
 
 header, main {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.main-text {
+  display: block;
 }
 
 .main-text .static {
@@ -73,14 +108,16 @@ header, main {
   position:absolute;
   left:0;
   top:0;
-  background: -moz-linear-gradient(top,  rgba(17, 25, 25, 255) 0%, rgba(17, 25, 25, 0) 20%, rgba(17, 25, 25, 0) 80%, rgba(17, 25, 25, 255) 100%);
-  background: -webkit-linear-gradient(top, rgba(17, 25, 25, 255) 0%, rgba(17, 25, 25, 0) 20%,rgba(17, 25, 25, 0) 80%, rgba(17, 25, 25, 255) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 25, 25, 255)), color-stop(20%, rgba(17, 25, 25, 0)),color-stop(80%, rgba(17, 25, 25, 0)), to(rgba(17, 25, 25, 255)));
+  background: -o-linear-gradient(top, rgba(17, 25, 25, 255) 0%, rgba(17, 25, 25, 0) 20%,rgba(17, 25, 25, 0) 80%, rgba(17, 25, 25, 255) 100%);
   background: linear-gradient(to bottom, rgba(17, 25, 25, 255) 0%, rgba(17, 25, 25, 0) 20%,rgba(17, 25, 25, 0) 80%, rgba(17, 25, 25, 255) 100%);
 }
 
 ul.v-slides {
   list-style-type: none;
-  transform: translateY(4rem);
+  -webkit-transform: translateY(4rem);
+      -ms-transform: translateY(4rem);
+          transform: translateY(4rem);
   padding:0;
   margin:0;
 }
