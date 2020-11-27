@@ -14,9 +14,10 @@ html, body {
 }
 
 body {
-  background-color: rgba(17, 25, 25, 255);
+  background-color: var(--bg-color);
   font-family: 'Overpass';
   color: var(--main-color);
+  text-shadow: 0px 0px 10px rgba(0, 255, 133, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,28 +129,40 @@ ul.v-slides {
 
 .v-slide .ruby {
   color: #cc0000;
+  text-shadow: 0px 0px 10px rgba(204, 0, 0, 0.5);
 }
 
 .v-slide .go {
   color: #00c2ff;
+  text-shadow: 0px 0px 10px rgba(0, 194, 255, 0.5);
 }
 
 .v-slide .fullstack {
   color: #744bcb;
+  text-shadow: 0px 0px 10px rgba(116, 75, 203, 0.5);
 }
 
 .v-slide .game {
   color: #e7b816;
+  text-shadow: 0px 0px 10px rgba(231, 184, 22, 0.5);
 }
 
 .icon {
   margin: 0 15px;
   display: inline-block;
+  text-shadow: 0px 0px 10px rgba(0, 255, 133, 0.5);
 }
 
 .icon object {
   width: 2.5rem;
   height: 2.5rem;
+  -webkit-filter: drop-shadow( 0px 0px 10px rgba(0, 255, 133, 0.5));
+  filter: drop-shadow( 0px 0px 10px rgba(0, 255, 133, 0.5));
+}
+
+.icon.katata-icon object {
+  -webkit-filter: drop-shadow( 0px 0px 10px rgba(231, 184, 22, 0.5));
+  filter: drop-shadow( 0px 0px 10px rgba(231, 184, 22, 0.5));
 }
 
 a.icon-link {
