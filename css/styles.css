@@ -156,6 +156,19 @@ a.icon-link {
   text-decoration: none;
 }
 
+a.icon-link object {
+  transition: all 0.2s ease;
+}
+
+a:hover.icon-link object {
+  filter: invert(80%) sepia(85%) saturate(5000%) hue-rotate(270deg) brightness(85%) contrast(89%);
+}
+
 object {
   pointer-events: none;
+}
+
+::selection {
+  color: var(--bg-color);
+  background: var(--main-color);
 }
