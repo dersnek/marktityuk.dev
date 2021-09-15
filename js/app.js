@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', initAnim);
 
 function initAnim() {
-	var vsOpts = {
+	const vsOpts = {
 		slides: document.getElementsByClassName('v-slide'),
 		list: document.getElementsByClassName('v-slides')[0],
 		duration: 7,
 		lineHeight: 4
 	};
 
-	var vSlide = gsap.timeline({
+	const vSlide = gsap.timeline({
 		paused: true,
 		repeat: -1
 	});
 
-	for (var i = 0; i < vsOpts.slides.length; i++) {
-		var duration = vsOpts.duration / vsOpts.slides.length;
+	for (let i = 0; i < vsOpts.slides.length; i++) {
+		let duration = vsOpts.duration / vsOpts.slides.length;
 		if (i == 0) {
 			duration = 0;
 		}
