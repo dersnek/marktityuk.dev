@@ -8,11 +8,11 @@
   --icon-size: 4rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   :root {
     --font-size: 4rem;
     --animated-div-width: 18.25rem;
-    --icon-size: 3rem;
+    --icon-size: 2.5rem;
   }
 }
 
@@ -29,63 +29,38 @@ body {
   background-color: var(--bg-color);
   font-family: 'Raleway';
   color: var(--main-color);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  min-height: 100%;
+  width: 100%;
   display: flex;
-  -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  font-size: var(--font-size);
+  margin: auto;
 }
 
 .page-wrapper {
   min-height: 100%;
   max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-flex;
-  -webkit-justify-content: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-          justify-content: center;
-
-  -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
   font-size: var(--font-size);
   padding: 2rem 1rem;
 }
 
-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  font-size: var(--font-size);
-  margin: auto;
-}
-
 footer {
+  align-self: flex-end;
   margin: 2.5rem 4rem 2.5rem 0;
   text-align: right;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   footer {
     margin: 0 0 2.5rem 0;
+    margin-top: auto;
     text-align: center;
+    align-self: auto;
   }
 }
 
@@ -161,6 +136,12 @@ span .gamedev {
   margin: 2rem 1rem 0 1rem;
   display: inline-block;
   text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .icon {
+    margin: 0.5rem 0.5rem 0 0.5rem;
+  }
 }
 
 .icon object {
