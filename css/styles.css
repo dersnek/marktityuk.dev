@@ -1,20 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 
 :root {
-  --main-color: #00ff85;
-  --bg-color: #111919;
+  --main-color: #CBCE46;
+  --bg-color: #161525;
+  --font-size: 6rem;
+  --animated-div-width: 27.375rem;
+  --icon-size: 4rem;
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --font-size: 4rem;
+    --animated-div-width: 18.25rem;
+    --icon-size: 3rem;
+  }
 }
 
 html, body {
   height: 100%;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
 }
 
 body {
   background-color: var(--bg-color);
-  font-family: 'Overpass';
+  font-family: 'Raleway';
   color: var(--main-color);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,11 +39,11 @@ body {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  position: fixed;
 }
 
 .page-wrapper {
   min-height: 100%;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,8 +57,7 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-  font-size: 2.5rem;
-  overflow-x: auto;
+  font-size: var(--font-size);
   padding: 2rem 1rem;
 }
 
@@ -61,94 +73,99 @@ main {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-  font-size: 2.5rem;
+  font-size: var(--font-size);
   margin: auto;
 }
 
 footer {
-  margin-top: -2.5rem;
-  padding-bottom: 2.5rem;
-  text-align: center;
+  margin: 2.5rem 4rem 2.5rem 0;
+  text-align: right;
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    margin: 0 0 2.5rem 0;
+    text-align: center;
+  }
 }
 
 header, main {
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+    flex-shrink: 0;
 }
 
 .main-text {
-  display: block;
+  line-height: var(--font-size);
 }
 
-.main-text .static {
-  line-height: 4rem;
-  overflow-wrap: break-word;
-}
-
-.main-text .static.inline {
+.main-text .inline {
   display: inline-block;
-  vertical-align: middle;
+  height: var(--font-size);
+  vertical-align: top;
 }
 
-.v-slider-frame {
-  display: inline-block;
-  height: 4rem;
-  width: 23rem;
-  overflow: hidden;
-  vertical-align: middle;
-  text-align: left;
-  position: relative;
+.animated {
+  height: var(--font-size);
+  width: var(--animated-div-width);
 }
 
-.v-slider-frame:after {
-  content:'';
-  width:100%;
-  height:100%;
-  position:absolute;
-  left:0;
-  top:0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 25, 25, 255)), color-stop(20%, rgba(17, 25, 25, 0)),color-stop(80%, rgba(17, 25, 25, 0)), to(rgba(17, 25, 25, 255)));
-  background: -o-linear-gradient(top, rgba(17, 25, 25, 255) 0%, rgba(17, 25, 25, 0) 20%,rgba(17, 25, 25, 0) 80%, rgba(17, 25, 25, 255) 100%);
-  background: linear-gradient(to bottom, rgba(17, 25, 25, 255) 0%, rgba(17, 25, 25, 0) 20%,rgba(17, 25, 25, 0) 80%, rgba(17, 25, 25, 255) 100%);
+.animated span {
+  opacity: 0;
+  height: var(--font-size);
+  position: absolute;
+  -ms-animation: changingText 4s infinite;
+  -webkit-animation: changingText 4s infinite;
+  animation: changingText 4s infinite;
 }
 
-ul.v-slides {
-  list-style-type: none;
-  -webkit-transform: translateY(4rem);
-      -ms-transform: translateY(4rem);
-          transform: translateY(4rem);
-  padding:0;
-  margin:0;
+.animated span:nth-child(2) {
+  -ms-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
-.v-slide {
-  line-height: 4rem;
+.animated span:nth-child(3) {
+  -ms-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
 }
 
-.v-slide .ruby {
-  color: #cc0000;
+.animated span:nth-child(4) {
+  -ms-animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
 }
 
-.v-slide .go {
-  color: #00c2ff;
+@keyframes changingText {
+  0%, 25% { opacity: 1 }
+  25.01%, 100% { opacity: 0 }
 }
 
-.v-slide .fullstack {
-  color: #744bcb;
+span .rails {
+  color: #CE4646;
 }
 
-.v-slide .game {
-  color: #e7b816;
+span .go {
+  color: #469DCE;
+}
+
+span .vuejs {
+  color: #46CE95;
+}
+
+span .gamedev {
+  color: #8246CE;
 }
 
 .icon {
-  margin: 0 15px;
+  margin: 2rem 1rem 0 1rem;
   display: inline-block;
+  text-align: center;
 }
 
 .icon object {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 
 a.icon-link {
@@ -156,12 +173,8 @@ a.icon-link {
   text-decoration: none;
 }
 
-a.icon-link object {
-  transition: all 0.2s ease;
-}
-
 a:hover.icon-link object {
-  filter: invert(80%) sepia(85%) saturate(5000%) hue-rotate(270deg) brightness(85%) contrast(89%);
+  filter: saturate(160%) hue-rotate(-30deg) brightness(160%);
 }
 
 object {
