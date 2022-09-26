@@ -88,9 +88,9 @@ header, main {
   opacity: 0;
   height: var(--font-size);
   position: absolute;
-  -ms-animation: changingText 4s infinite;
-  -webkit-animation: changingText 4s infinite;
-  animation: changingText 4s infinite;
+  -ms-animation: changingText 5s infinite;
+  -webkit-animation: changingText 5s infinite;
+  animation: changingText 5s infinite;
 }
 
 .animated span:nth-child(2) {
@@ -111,9 +111,15 @@ header, main {
   animation-delay: 3s;
 }
 
+.animated span:nth-child(5) {
+  -ms-animation-delay: 4s;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
 @keyframes changingText {
-  0%, 25% { opacity: 1 }
-  25.01%, 100% { opacity: 0 }
+  0%, 20% { opacity: 1 }
+  20.01%, 100% { opacity: 0 }
 }
 
 span .rails {
@@ -124,8 +130,12 @@ span .go {
   color: #469DCE;
 }
 
-span .vuejs {
+span .javascript {
   color: #46CE95;
+}
+
+span .csharp {
+  color: #a2a2a2;
 }
 
 span .gamedev {
