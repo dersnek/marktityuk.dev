@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 
 :root {
-  --main-color: #CBCE46;
-  --bg-color: #161525;
+  --main-color: #FF3366;
+  --bg-color: #011627;
   --font-size: 6rem;
   --animated-div-width: 27.375rem;
   --icon-size: 4rem;
@@ -88,58 +88,50 @@ header, main {
   opacity: 0;
   height: var(--font-size);
   position: absolute;
-  -ms-animation: changingText 5s infinite;
-  -webkit-animation: changingText 5s infinite;
-  animation: changingText 5s infinite;
+  -ms-animation: changingText 4.8s infinite;
+  -webkit-animation: changingText 4.8s infinite;
+  animation: changingText 4.8s infinite;
 }
 
 .animated span:nth-child(2) {
-  -ms-animation-delay: 1s;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+  -ms-animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+  animation-timing-function: ease-out;
 }
 
 .animated span:nth-child(3) {
-  -ms-animation-delay: 2s;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+  -ms-animation-delay: 2.4s;
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+  animation-timing-function: ease-out;
 }
 
 .animated span:nth-child(4) {
-  -ms-animation-delay: 3s;
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
-}
-
-.animated span:nth-child(5) {
-  -ms-animation-delay: 4s;
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+  -ms-animation-delay: 3.6s;
+  -webkit-animation-delay: 3.6s;
+  animation-delay: 3.6s;
 }
 
 @keyframes changingText {
-  0%, 20% { opacity: 1 }
-  20.01%, 100% { opacity: 0 }
+  0%, 25% { opacity: 1 }
+  25.01%, 100% { opacity: 0 }
 }
 
-span .rails {
-  color: #CE4646;
+span .color-1 {
+  color: #2EC4B6;
 }
 
-span .go {
-  color: #469DCE;
+span .color-2 {
+  color: #F2AF29;
 }
 
-span .javascript {
-  color: #46CE95;
+span .color-3 {
+  color: #DBDBDB;
 }
 
-span .csharp {
-  color: #a2a2a2;
-}
-
-span .gamedev {
-  color: #8246CE;
+span .color-4 {
+  color: #F7E733;
 }
 
 .icon {
@@ -157,6 +149,8 @@ span .gamedev {
 .icon object {
   width: var(--icon-size);
   height: var(--icon-size);
+  transition: all 0.4s ease;
+  transition-property: transform;
 }
 
 a.icon-link {
@@ -165,7 +159,10 @@ a.icon-link {
 }
 
 a:hover.icon-link object {
-  filter: saturate(160%) hue-rotate(-30deg) brightness(160%);
+  transform: translateY(-10px);
+  filter: saturate(130%) hue-rotate(-160deg) brightness(150%);
+  transition: all 0.4s ease;
+  transition-property: transform;
 }
 
 object {
